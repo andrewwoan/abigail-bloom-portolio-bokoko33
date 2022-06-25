@@ -306,6 +306,17 @@ export default class Preloader extends EventEmitter {
                     "chair"
                 )
                 .to(
+                    this.roomChildren.fish.scale,
+                    {
+                        x: 1,
+                        y: 1,
+                        z: 1,
+                        ease: "back.out(2.2)",
+                        duration: 0.5,
+                    },
+                    "chair"
+                )
+                .to(
                     this.roomChildren.chair.rotation,
                     {
                         y: 4 * Math.PI + Math.PI / 4,
