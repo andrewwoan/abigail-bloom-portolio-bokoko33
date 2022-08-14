@@ -88,6 +88,8 @@ export default class Controls {
                 this.room.scale.set(0.11, 0.11, 0.11);
                 this.rectLight.width = 0.5;
                 this.rectLight.height = 0.7;
+                this.camera.orthographicCamera.position.set(0, 6.5, 10);
+                this.room.position.set(0, 0, 0);
                 // First section -----------------------------------------
                 this.firstMoveTimeline = new GSAP.timeline({
                     scrollTrigger: {
@@ -99,11 +101,15 @@ export default class Controls {
                         invalidateOnRefresh: true,
                     },
                 });
-                this.firstMoveTimeline.to(this.room.position, {
-                    x: () => {
-                        return this.sizes.width * 0.0014;
-                    },
-                });
+                this.firstMoveTimeline.fromTo(
+                    this.room.position,
+                    { x: 0, y: 0, z: 0 },
+                    {
+                        x: () => {
+                            return this.sizes.width * 0.0014;
+                        },
+                    }
+                );
 
                 // Second section -----------------------------------------
                 this.secondMoveTimeline = new GSAP.timeline({
@@ -152,7 +158,7 @@ export default class Controls {
                         start: "top top",
                         end: "bottom bottom",
                         scrub: 0.6,
-                        invalidateOnRefresh: true,
+                        // invalidateOnRefresh: true,
                     },
                 }).to(this.camera.orthographicCamera.position, {
                     y: 1.5,
@@ -169,6 +175,7 @@ export default class Controls {
                 this.room.position.set(0, 0, 0);
                 this.rectLight.width = 0.3;
                 this.rectLight.height = 0.4;
+                this.camera.orthographicCamera.position.set(0, 6.5, 10);
 
                 // First section -----------------------------------------
                 this.firstMoveTimeline = new GSAP.timeline({
@@ -177,7 +184,7 @@ export default class Controls {
                         start: "top top",
                         end: "bottom bottom",
                         scrub: 0.6,
-                        invalidateOnRefresh: true,
+                        // invalidateOnRefresh: true,
                     },
                 }).to(this.room.scale, {
                     x: 0.1,
@@ -192,7 +199,7 @@ export default class Controls {
                         start: "top top",
                         end: "bottom bottom",
                         scrub: 0.6,
-                        invalidateOnRefresh: true,
+                        // invalidateOnRefresh: true,
                     },
                 })
                     .to(
@@ -227,7 +234,7 @@ export default class Controls {
                         start: "top top",
                         end: "bottom bottom",
                         scrub: 0.6,
-                        invalidateOnRefresh: true,
+                        // invalidateOnRefresh: true,
                     },
                 }).to(this.room.position, {
                     z: -4.5,
@@ -302,7 +309,6 @@ export default class Controls {
                         start: "top top",
                         end: "bottom bottom",
                         scrub: 0.6,
-                        invalidateOnRefresh: true,
                     },
                 }).to(this.circleFirst.scale, {
                     x: 3,
@@ -317,7 +323,6 @@ export default class Controls {
                         start: "top top",
                         end: "bottom bottom",
                         scrub: 0.6,
-                        invalidateOnRefresh: true,
                     },
                 })
                     .to(
@@ -344,7 +349,6 @@ export default class Controls {
                         start: "top top",
                         end: "bottom bottom",
                         scrub: 0.6,
-                        invalidateOnRefresh: true,
                     },
                 }).to(this.circleThird.scale, {
                     x: 3,
