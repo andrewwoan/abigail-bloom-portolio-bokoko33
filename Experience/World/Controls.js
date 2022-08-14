@@ -33,7 +33,7 @@ export default class Controls {
     setupASScroll() {
         // https://github.com/ashthornton/asscroll
         const asscroll = new ASScroll({
-            ease: 0.3,
+            ease: 0.5,
             disableRaf: true,
         });
 
@@ -95,7 +95,8 @@ export default class Controls {
                         start: "top top",
                         end: "bottom bottom",
                         scrub: 0.6,
-                        invalidateOnRefresh: true,
+                        markers: true,
+                        // invalidateOnRefresh: true,
                     },
                 });
                 this.firstMoveTimeline.to(this.room.position, {
@@ -295,7 +296,7 @@ export default class Controls {
 
                 // All animations
                 // First section -----------------------------------------
-                this.firstMoveTimeline = new GSAP.timeline({
+                this.firstCircle = new GSAP.timeline({
                     scrollTrigger: {
                         trigger: ".first-move",
                         start: "top top",
@@ -310,7 +311,7 @@ export default class Controls {
                 });
 
                 // Second section -----------------------------------------
-                this.secondMoveTimeline = new GSAP.timeline({
+                this.secondCircle = new GSAP.timeline({
                     scrollTrigger: {
                         trigger: ".second-move",
                         start: "top top",
@@ -337,7 +338,7 @@ export default class Controls {
                     );
 
                 // Third section -----------------------------------------
-                this.thirdMoveTimeline = new GSAP.timeline({
+                this.thirdCircle = new GSAP.timeline({
                     scrollTrigger: {
                         trigger: ".third-move",
                         start: "top top",
