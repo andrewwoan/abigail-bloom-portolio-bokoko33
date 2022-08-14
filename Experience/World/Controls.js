@@ -158,7 +158,7 @@ export default class Controls {
                         start: "top top",
                         end: "bottom bottom",
                         scrub: 0.6,
-                        // invalidateOnRefresh: true,
+                        invalidateOnRefresh: true,
                     },
                 }).to(this.camera.orthographicCamera.position, {
                     y: 1.5,
@@ -199,7 +199,7 @@ export default class Controls {
                         start: "top top",
                         end: "bottom bottom",
                         scrub: 0.6,
-                        // invalidateOnRefresh: true,
+                        invalidateOnRefresh: true,
                     },
                 })
                     .to(
@@ -234,7 +234,7 @@ export default class Controls {
                         start: "top top",
                         end: "bottom bottom",
                         scrub: 0.6,
-                        // invalidateOnRefresh: true,
+                        invalidateOnRefresh: true,
                     },
                 }).to(this.room.position, {
                     z: -4.5,
