@@ -96,7 +96,7 @@ export default class Controls {
                         end: "bottom bottom",
                         scrub: 0.6,
                         // markers: true,
-                        // invalidateOnRefresh: true,
+                        invalidateOnRefresh: true,
                     },
                 });
                 this.firstMoveTimeline.to(this.room.position, {
