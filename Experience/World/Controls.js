@@ -26,7 +26,13 @@ export default class Controls {
 
         document.querySelector(".page").style.overflow = "visible";
 
-        this.setSmoothScroll();
+        if (
+            !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                navigator.userAgent
+            )
+        ) {
+            this.setSmoothScroll();
+        }
         this.setScrollTrigger();
     }
 
