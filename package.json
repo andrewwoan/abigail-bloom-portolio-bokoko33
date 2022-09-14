@@ -1,0 +1,18 @@
+{
+  "name": "boko-tutorial",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@ashthornton/asscroll": "^2.0.7",
+    "events": "^3.3.0",
+    "gsap": "^3.10.4",
+    "lil-gui": "^0.16.1",
+    "three": "^0.141.0",
+    "vite": "^3.1.0"
+  }
+}
