@@ -2,4 +2,4 @@
 
 PLEASE DO NOT COPY THIS AS YOUR OWN PORTFOLIO. It is for educational purposes ONLY. 
 
-If you copy it I will be forced to take down my video.
+If you copy it I will have to take down my video.
