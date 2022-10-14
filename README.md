@@ -3,3 +3,5 @@
 PLEASE DO NOT COPY THIS AS YOUR OWN PORTFOLIO. It is for educational purposes ONLY. 
 
 If you copy it, I will have to take down my video.
+
+Paid option with Blender file has been removed to prevent copying.
