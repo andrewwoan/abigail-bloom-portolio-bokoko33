@@ -31,6 +31,7 @@ export default class Room {
 
             if (child instanceof THREE.Group) {
                 child.children.forEach((groupchild) => {
+                    console.log(groupchild.material);
                     groupchild.castShadow = true;
                     groupchild.receiveShadow = true;
                 });
@@ -46,6 +47,8 @@ export default class Room {
                 child.children[0].material.ior = 3;
                 child.children[0].material.transmission = 1;
                 child.children[0].material.opacity = 1;
+                child.children[0].material.depthWrite = false;
+                child.children[0].material.depthTest = false;
             }
 
             if (child.name === "Computer") {
